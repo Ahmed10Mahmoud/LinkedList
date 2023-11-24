@@ -66,7 +66,7 @@ void linkedList::insert_Position(int item,int newValue)
 void linkedList::deleteFirst()
 {
 	if (isEmpty())
-		cout<<"Can’t delete because the list is empty\n";
+		cout<<"Can't delete because the list is empty\n";
 	else if (length() == 1)
 	{
 		delete head;
@@ -123,6 +123,16 @@ int linkedList::length()
 	return count;
 }
 
+void linkedList::display()
+{
+	Node* temp = head;
+	while (temp != NULL)
+	{
+		cout << temp->data << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+}
 void linkedList::display()
 {
 	Node* temp = head;
